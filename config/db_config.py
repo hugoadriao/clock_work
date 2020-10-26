@@ -1,1 +1,1 @@
-SQLITE_URI = 'sqlite:////database/clock_database'
+SQLITE_URI = 'sqlite:///database/clock_database.db'
