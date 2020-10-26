@@ -1,3 +1,4 @@
 .idea
 venv
 models.py
+*__pycache__*
