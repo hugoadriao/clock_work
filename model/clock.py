@@ -11,7 +11,11 @@ class ClockModel(db.Model):
         server_default=db.FetchedValue()
     )
     cloregister = db.Column(db.Time, nullable=False)
-    clotimestamp = db.Column(db.DateTime, primary_key=True, nullable=False)
+    clotimestamp = db.Column(
+        db.DateTime,
+        primary_key=True,
+        nullable=False
+    )
     cloperid = db.Column(
         db.ForeignKey('person.perid'),
         primary_key=True, nullable=False
