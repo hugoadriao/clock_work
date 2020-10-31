@@ -1,7 +1,8 @@
 from config.sql_alchemy import db
+from model.function import FunctionModel
 
 
-class Person(db.Model):
+class PersonModel(db.Model):
     __tablename__ = 'person'
 
     perid = db.Column(
@@ -23,8 +24,8 @@ class Person(db.Model):
     pername = db.Column(db.String(40), nullable=False)
     percode = db.Column(db.String(30))
 
-    function = db.relationship(
-        'Function',
-        primaryjoin='Person.perfunction == Function.funid',
+    function_relation = db.relationship(
+        FunctionModel,
+        primaryjoin='PersonModel.perfunction == FunctionModel.funid',
         backref='people'
     )
