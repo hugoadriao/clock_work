@@ -1,7 +1,7 @@
 from config.sql_alchemy import db
 
 
-class Function(db.Model):
+class FunctionModel(db.Model):
     __tablename__ = 'function'
 
     funid = db.Column(
