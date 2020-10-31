@@ -1,4 +1,5 @@
 from config.sql_alchemy import db
+from model.person import PersonModel
 
 
 class ClockModel(db.Model):
@@ -22,7 +23,7 @@ class ClockModel(db.Model):
     )
 
     person_relation = db.relationship(
-        'Person',
-        primaryjoin='ClockModel.cloperid == Person.perid',
+        PersonModel,
+        primaryjoin='ClockModel.cloperid == PersonModel.perid',
         backref='clocks'
     )
