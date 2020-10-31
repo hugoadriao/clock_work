@@ -16,6 +16,12 @@ clock_namespace.add_resource(
     }
 )
 
+# TODO delete this when the application is ready
+from config.sql_alchemy import db
+
+db.init_app(app)
+# only to debug with PyCharm
+
 if __name__ == '__main__':
     from config.sql_alchemy import db
 
