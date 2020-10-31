@@ -38,4 +38,14 @@ class Clock(Resource):
             all_model_registers
         ]
 
-        return all_datetime_registers
+        response = {
+            "data": {
+                "clock": {
+                    "registers": all_datetime_registers,
+                    "max_no_break_time": max_no_break_time,
+                    "worked_time": worked_time
+                }
+            }
+        }
+
+        return response
